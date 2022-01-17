@@ -7,15 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div>{{layout.hbs}}</div>
     <div>
-        <img src="../public/images/beer.png" alt="">
+        {{#each beers}}
         <div>
-            <a href="/beers">Check the Beers !</a>
-            <a href="/random-beers">Check a Random Beer !</a>
+           <img src="{{this.image}}" alt=""> 
         </div>
+        <div> 
+            {{this.name}}
+        </div>
+        <div>
+            {{this.description}}
+        </div>
+        <div>
+            {{this.tagline}}
+        </div>
+        {{/each}}
     </div>
-
 </body>
 </html>
